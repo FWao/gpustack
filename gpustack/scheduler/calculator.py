@@ -284,7 +284,7 @@ async def calculate_model_resource_claim(
 
         if offload == GPUOffloadEnum.Full:
             # Add multiplier right before logging
-            multiplier = 0.75  # Adjust this value based on your needs
+            multiplier = 0.65  # Adjust this value based on your needs
             print(f"Multiply resource claim with factor {multiplier}")
             for item in claim.estimate.items:
                 item.ram.uma = int(item.ram.uma * multiplier)
